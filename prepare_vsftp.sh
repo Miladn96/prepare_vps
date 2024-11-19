@@ -37,8 +37,6 @@ install_vsftpd() {
 
 function main_menu {
 	local option
-	# Get current inbound stuff
-	print_inbound
 	# Main menu
 	echo "What do you want to do?"
 	echo "	1) install vsftp"
