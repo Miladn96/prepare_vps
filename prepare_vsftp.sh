@@ -53,4 +53,7 @@ function main_menu {
 
 # Main menu
 clear
+echo "V2Fly/Xray installer script by Hirbod Behnam"
+echo "Source at https://github.com/HirbodBehnam/V2Ray-Installer"
+echo
 main_menu
