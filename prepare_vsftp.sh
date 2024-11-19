@@ -35,21 +35,23 @@ install_vsftpd() {
   sudo systemctl restart vsftpd
 }
 
-function main_menu {
-	local option
-	# Main menu
-	echo "What do you want to do?"
-	echo "	1) install vsftp"
-	echo "	0) Exit"
-	read -r -p "Please enter an option: " option
-	case $option in
-	  1) install_vsftpd ;;
-    0) exit 0 ;;
-    *) echo "Invalid option. Please enter 1 or 0." ;;
-	esac
-}
-
-
 # Main menu
-clear
-main_menu
+while true; do
+  clean
+  echo "1. Install vsftpd"
+  echo "2. Exit"
+
+  read -p "Enter your choice: " choice
+
+  case $choice in
+    1)
+      install_vsftpd
+      ;;
+    2)
+      exit 0
+      ;;
+    *)
+      echo "Invalid choice. Please try again."
+      ;;
+  esac
+done
