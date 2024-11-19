@@ -43,9 +43,9 @@ function main_menu {
 	echo "	0) Exit"
 	read -r -p "Please enter an option: " option
 	case $option in
-	1) install_vsftpd ;;
-  0) exit 0;;
-  *) echo "Invalid option. Please enter 1 or 0." ;;
+	  1) install_vsftpd ;;
+    0) exit 0 ;;
+    *) echo "Invalid option. Please enter 1 or 0." ;;
 	esac
 }
 
